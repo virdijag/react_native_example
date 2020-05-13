@@ -43,7 +43,7 @@ const MainTabScreen = () => (
         tabBarLabel: 'Subscriptions',
         tabBarColor:'#009387',
         tabBarIcon: ({ color }) => (
-          <MaterialCommunityIcons name="bell" color={color} size={26} />
+          <MaterialCommunityIcons name="wallet" color={color} size={26} />
         ),
       }}
     />
@@ -69,12 +69,13 @@ const HomeStackScreen = ({navigation}) => (
       headerTintColor:'#fff',
       headerTitleStyle:{
         fontWeight: 'bold'
-      }
+      },
+      
   }}>
     <HomeStack.Screen name="Home" component={HomeScreen} options={{
       title:'Home',
       headerLeft: () => (
-        <MaterialCommunityIcons name="menu" size={25} backgroundColor="#009387"
+        <MaterialCommunityIcons color="#fff" name="menu" size={25} backgroundColor="#009387"
         onPress={() =>  { navigation.openDrawer()}}/>
               )
     }} />
@@ -95,7 +96,7 @@ const HomeStackScreen = ({navigation}) => (
     <SubscriptionStack.Screen name="Subscriptions" component={SubscriptionScreen} options={{
       title:'Subscriptions',
       headerLeft: () => (
-        <MaterialCommunityIcons name="menu" size={25} backgroundColor="#009387"
+        <MaterialCommunityIcons color="#fff" name="menu" size={25} backgroundColor="#009387"
         options={() =>  { navigation.openDrawer()}}/>
               )
     }} />
