@@ -16,6 +16,7 @@ import ProfileScreen from './Profile';
 
 const HomeStack = createStackNavigator();
 const SubscriptionStack = createStackNavigator();
+const ProfileStack = createStackNavigator();
 const Tab = createMaterialBottomTabNavigator();
 
 const MainTabScreen = () => (
@@ -49,7 +50,7 @@ const MainTabScreen = () => (
     />
     <Tab.Screen
       name="Profile"
-      component={ProfileScreen}
+      component={ProfileStackScreen}
       options={{
         tabBarLabel: 'Profile',
         tabBarColor:'#009387',
@@ -75,7 +76,7 @@ const HomeStackScreen = ({navigation}) => (
     <HomeStack.Screen name="Home" component={HomeScreen} options={{
       title:'Home',
       headerLeft: () => (
-        <MaterialCommunityIcons color="#fff" name="menu" size={25} backgroundColor="#009387"
+        <MaterialCommunityIcons color="#fff" name="menu" size={25} backgroundColor="#009387" 
         onPress={() =>  { navigation.openDrawer()}}/>
               )
     }} />
@@ -97,11 +98,33 @@ const HomeStackScreen = ({navigation}) => (
       title:'Subscriptions',
       headerLeft: () => (
         <MaterialCommunityIcons color="#fff" name="menu" size={25} backgroundColor="#009387"
-        options={() =>  { navigation.openDrawer()}}/>
+        onPress={() =>  { navigation.openDrawer()}}/>
               )
     }} />
    
   </SubscriptionStack.Navigator>
+  );
+
+  const ProfileStackScreen = ({navigation}) => (
+    <ProfileStack.Navigator screenOptions={{
+      headerStyle:{
+        backgroundColor:'#009387'
+      },
+      headerTintColor:'#fff',
+      headerTitleStyle:{
+        fontWeight: 'bold'
+      },
+      
+  }}>
+    <ProfileStack.Screen name="Profile" component={ProfileScreen} options={{
+      title:'Profile',
+      headerLeft: () => (
+        <MaterialCommunityIcons color="#fff" name="menu" size={25} backgroundColor="#009387" 
+        onPress={() =>  { navigation.openDrawer()}}/>
+              )
+    }} />
+   
+  </ProfileStack.Navigator>
   );
 
   export default MainTabScreen;
