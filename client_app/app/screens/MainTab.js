@@ -23,7 +23,7 @@ const MainTabScreen = () => (
     <Tab.Navigator
     initialRouteName="Home"
     activeColor="#fff"
-    barStyle={{ backgroundColor: '#009387' }}
+    barStyle={{ backgroundColor: '#034824' }}
     
   >
     <Tab.Screen
@@ -31,7 +31,7 @@ const MainTabScreen = () => (
       component={HomeStackScreen}
       options={{
         tabBarLabel: 'Home',
-        tabBarColor:'#009387',
+        tabBarColor:'#034824',
         tabBarIcon: ({ color }) => (
           <MaterialCommunityIcons name="home" color={color} size={26} />
         ),
@@ -42,7 +42,7 @@ const MainTabScreen = () => (
       component={SubscriptionStackScreen}
       options={{
         tabBarLabel: 'Subscriptions',
-        tabBarColor:'#009387',
+        tabBarColor:'#034824',
         tabBarIcon: ({ color }) => (
           <MaterialCommunityIcons name="wallet" color={color} size={26} />
         ),
@@ -53,7 +53,7 @@ const MainTabScreen = () => (
       component={ProfileStackScreen}
       options={{
         tabBarLabel: 'Profile',
-        tabBarColor:'#009387',
+        tabBarColor:'#034824',
         tabBarIcon: ({ color }) => (
           <MaterialCommunityIcons name="account" color={color} size={26} />
         ),
@@ -65,7 +65,7 @@ const MainTabScreen = () => (
 const HomeStackScreen = ({navigation}) => (
     <HomeStack.Navigator screenOptions={{
       headerStyle:{
-        backgroundColor:'#009387'
+        backgroundColor:'#034824'
       },
       headerTintColor:'#fff',
       headerTitleStyle:{
@@ -76,7 +76,7 @@ const HomeStackScreen = ({navigation}) => (
     <HomeStack.Screen name="Home" component={HomeScreen} options={{
       title:'Home',
       headerLeft: () => (
-        <MaterialCommunityIcons color="#fff" name="menu" size={25} backgroundColor="#009387" 
+        <MaterialCommunityIcons color="#fff" name="menu" size={25} backgroundColor="#034824" 
         onPress={() =>  { navigation.openDrawer()}}/>
               )
     }} />
@@ -87,7 +87,7 @@ const HomeStackScreen = ({navigation}) => (
   const SubscriptionStackScreen = ({navigation}) => (
     <SubscriptionStack.Navigator screenOptions={{
       headerStyle:{
-        backgroundColor:'#009387'
+        backgroundColor:'#034824'
       },
       headerTintColor:'#fff',
       headerTitleStyle:{
@@ -97,7 +97,7 @@ const HomeStackScreen = ({navigation}) => (
     <SubscriptionStack.Screen name="Subscriptions" component={SubscriptionScreen} options={{
       title:'Subscriptions',
       headerLeft: () => (
-        <MaterialCommunityIcons color="#fff" name="menu" size={25} backgroundColor="#009387"
+        <MaterialCommunityIcons color="#fff" name="menu" size={25} backgroundColor="#034824"
         onPress={() =>  { navigation.openDrawer()}}/>
               )
     }} />
@@ -108,7 +108,7 @@ const HomeStackScreen = ({navigation}) => (
   const ProfileStackScreen = ({navigation}) => (
     <ProfileStack.Navigator screenOptions={{
       headerStyle:{
-        backgroundColor:'#009387'
+        backgroundColor:'#034824'
       },
       headerTintColor:'#fff',
       headerTitleStyle:{
@@ -119,7 +119,7 @@ const HomeStackScreen = ({navigation}) => (
     <ProfileStack.Screen name="Profile" component={ProfileScreen} options={{
       title:'Profile',
       headerLeft: () => (
-        <MaterialCommunityIcons color="#fff" name="menu" size={25} backgroundColor="#009387" 
+        <MaterialCommunityIcons color="#fff" name="menu" size={25} backgroundColor="#034824" 
         onPress={() =>  { navigation.openDrawer()}}/>
               )
     }} />

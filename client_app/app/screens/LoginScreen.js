@@ -14,8 +14,12 @@ import * as Animatable from 'react-native-animatable';
 import LinearGradient from 'react-native-linear-gradient';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Feather from 'react-native-vector-icons/Feather';
+import {AuthContext} from '../components/context';
 
 const LoginScreen = ({navigation}) => {
+
+    const { login } = React.useContext(AuthContext);
+
     return (
         <View style={styles.container}>
             <View style={styles.header}>
@@ -68,10 +72,14 @@ const LoginScreen = ({navigation}) => {
                 />
                 </TouchableOpacity>
             </View>  
+            <TouchableOpacity>
+                <Text style={{color: '#009387', marginTop:15}}
+                onPress={()=>{alert("forgot password screen")}}>Forgot password?</Text>
+            </TouchableOpacity>
             <View style={styles.button}>
             <TouchableOpacity
                     style={styles.signIn}
-                    onPress={() => navigation.navigate('Home', {screen:'HomeDrawer'})}
+                    onPress={() => {login()}}
                 >
                 <LinearGradient
                 colors={['#348243','#348243']}

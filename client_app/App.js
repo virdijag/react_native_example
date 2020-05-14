@@ -13,36 +13,50 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 
+
 import MainTabScreen from './app/screens/MainTab';
 import DrawerContent from './app/screens/DrawerContent';
 
 import RootStackScreen from './app/screens/RootStackScreen';
-
+import {AuthContext} from './app/components/context';
 const Drawer = createDrawerNavigator();
 
-const Home = () => {
-  return(
-    <Drawer.Navigator drawerContent={props => <DrawerContent {...props}/>}>
-    <Drawer.Screen name="HomeDrawer" component={MainTabScreen} />
- 
-  </Drawer.Navigator>
-  );
-}
 
 const App = () => {
-  return (
-    <NavigationContainer>
-      
-     
-      <RootStackScreen/>
 
-       {/* <Drawer.Navigator drawerContent={props => <DrawerContent {...props}/>}>
-        <Drawer.Screen name="HomeDrawer" component={MainTabScreen} />
+  const [userToken, setUserToken] = React.useState(null);
+
+  const authContext = React.useMemo(() => ({
+    login:() => {
+      setUserToken('sometoken');
+    }, 
+    signout: () => {
+      setUserToken(null);
+    },
+    register: () => {
+      setUserToken('sometoken');
+    }
+  }));
+
+  return ( 
+    <AuthContext.Provider value={authContext}>
+      <NavigationContainer>
+
+      {userToken === null ? (
+         <RootStackScreen/>
+      )
+      :
+      <Drawer.Navigator drawerContent={props => <DrawerContent {...props}/>}>
+      <Drawer.Screen name="HomeDrawer" component={MainTabScreen} />     
+    </Drawer.Navigator> 
      
-      </Drawer.Navigator> */}
-      
+       }
+     
+     
+    
      
     </NavigationContainer>
+  </AuthContext.Provider>
   );
 }
 
