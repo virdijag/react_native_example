@@ -7,11 +7,11 @@ import {
 
 
 import { createStackNavigator } from '@react-navigation/stack';
-import HomeScreen from './Home';
-import SubscriptionScreen from './Subscription';
+import HomeScreen from '../home/index';
+import SubscriptionScreen from '../subscription/index';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import ProfileScreen from './Profile';
+import ProfileScreen from '../profile/profile-form';
 
 
 const HomeStack = createStackNavigator();

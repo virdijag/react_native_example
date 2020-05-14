@@ -14,11 +14,15 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 
 
-import MainTabScreen from './app/screens/MainTab';
-import DrawerContent from './app/screens/DrawerContent';
+// import MainTabScreen from './src/screens/MainTab';
+// import DrawerContent from './src/screens/DrawerContent';
 
-import RootStackScreen from './app/screens/RootStackScreen';
-import {AuthContext} from './app/components/context';
+// import RootStackScreen from './src/screens/RootStackScreen';
+import BottomTabMenu  from '../features/navigation/bottom-tab-content';
+import SideMenu from '../features/navigation/drawer-content';
+import RootNavMenu from '../features/navigation/root-content';
+import {AuthContext} from '../components/context';
+
 const Drawer = createDrawerNavigator();
 
 
@@ -42,7 +46,16 @@ const App = () => {
     <AuthContext.Provider value={authContext}>
       <NavigationContainer>
 
-      {userToken === null ? (
+         {userToken === null ? (
+           <RootNavMenu/>          
+      )
+      :
+      <Drawer.Navigator drawerContent={props => <SideMenu {...props}/>}>
+        <Drawer.Screen name="HomeDrawer" component={BottomTabMenu} /> 
+      </Drawer.Navigator> 
+       }
+
+      {/* {userToken === null ? (
          <RootStackScreen/>
       )
       :
@@ -50,7 +63,7 @@ const App = () => {
       <Drawer.Screen name="HomeDrawer" component={MainTabScreen} />     
     </Drawer.Navigator> 
      
-       }
+       } */}
      
      
     

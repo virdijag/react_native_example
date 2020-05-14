@@ -17,7 +17,7 @@ import {
     DrawerItem
 } from '@react-navigation/drawer';
 
-import {AuthContext} from '../components/context';
+import {AuthContext} from '../../components/context';
  
   import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 

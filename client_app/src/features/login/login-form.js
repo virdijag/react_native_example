@@ -14,7 +14,7 @@ import * as Animatable from 'react-native-animatable';
 import LinearGradient from 'react-native-linear-gradient';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Feather from 'react-native-vector-icons/Feather';
-import {AuthContext} from '../components/context';
+import {AuthContext} from '../../components/context';
 
 const LoginScreen = ({navigation}) => {
 
