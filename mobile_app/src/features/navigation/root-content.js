@@ -3,8 +3,8 @@ import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 
 import SplashScreen from '../splash/index';
-import LoginScreen from '../login/login-form';
-import RegisterScreen from '../register/register-form';
+import LoginScreen from '../login/index';
+import RegisterScreen from '../register/index';
 
 const RootStack = createStackNavigator();
 

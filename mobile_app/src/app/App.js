@@ -13,11 +13,6 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 
-
-// import MainTabScreen from './src/screens/MainTab';
-// import DrawerContent from './src/screens/DrawerContent';
-
-// import RootStackScreen from './src/screens/RootStackScreen';
 import BottomTabMenu  from '../features/navigation/bottom-tab-content';
 import SideMenu from '../features/navigation/drawer-content';
 import RootNavMenu from '../features/navigation/root-content';

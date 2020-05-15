@@ -5,12 +5,10 @@ import {
    StyleSheet,
   Button } from 'react-native';
 
-
-
-const HomeScreen = ({navigation}) => {
+const HomeForm = ({navigation}) => {
   
   return (
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <View >
         <Text>Home Screen</Text>
         <Button title="Go to Subscription" 
         onPress={()=> navigation.navigate("Subscriptions")}/>
@@ -18,4 +16,4 @@ const HomeScreen = ({navigation}) => {
     );
   }
 
-export default HomeScreen;
+export default HomeForm;

@@ -11,7 +11,7 @@ import HomeScreen from '../home/index';
 import SubscriptionScreen from '../subscription/index';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import ProfileScreen from '../profile/profile-form';
+import ProfileScreen from '../profile/index';
 
 
 const HomeStack = createStackNavigator();

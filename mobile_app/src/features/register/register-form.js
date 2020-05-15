@@ -16,7 +16,8 @@ import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Feather from 'react-native-vector-icons/Feather';
 import {AuthContext} from '../../components/context';
 
-const RegisterScreen = ({navigation}) => {
+
+const RegisterForm = ({navigation}) => {
 
     const { register } = React.useContext(AuthContext);
 
@@ -102,7 +103,7 @@ const RegisterScreen = ({navigation}) => {
     );
 ;}
 
-export default RegisterScreen;
+export default RegisterForm;
 
 const styles = StyleSheet.create({
     container: {

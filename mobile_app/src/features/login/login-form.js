@@ -16,7 +16,7 @@ import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Feather from 'react-native-vector-icons/Feather';
 import {AuthContext} from '../../components/context';
 
-const LoginScreen = ({navigation}) => {
+const LoginForm = ({navigation}) => {
 
     const { login } = React.useContext(AuthContext);
 
@@ -95,7 +95,7 @@ const LoginScreen = ({navigation}) => {
                 </LinearGradient>
                 </TouchableOpacity>
                 <TouchableOpacity
-                    onPress={() => navigation.navigate('RegisterScreen')}
+                    onPress={() => navigation.navigate("RegisterScreen")}
                     style={[styles.signIn, {
                         borderColor: '#009387',
                         borderWidth: 1,
@@ -112,9 +112,9 @@ const LoginScreen = ({navigation}) => {
            
         </View>
     );
-;}
+}
 
-export default LoginScreen;
+export default LoginForm;
 
 const styles = StyleSheet.create({
     container: {

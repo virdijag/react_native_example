@@ -1,10 +1,5 @@
 import React from 'react';
-import { 
-    View,
-    Text,
-   
-  Button } from 'react-native';
-
+import { View, Text } from 'react-native';
 
 const SubscriptionScreen = () => {
     return (
@@ -14,4 +9,4 @@ const SubscriptionScreen = () => {
     );
   }
 
-  export default SubscriptionScreen;
+export default SubscriptionScreen;
