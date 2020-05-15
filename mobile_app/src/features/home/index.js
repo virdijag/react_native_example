@@ -8,7 +8,7 @@ const HomeScreen = ({navigation}) => {
   return (
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
         <Header title="Home Screen"/>
-       <HomeForm />
+       <HomeForm navigation={navigation}/>
       </View>
     );
   }
