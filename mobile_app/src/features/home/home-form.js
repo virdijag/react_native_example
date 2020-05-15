@@ -1,15 +1,10 @@
 import React from 'react';
-import { 
-    View,
-    Text,
-   StyleSheet,
-  Button } from 'react-native';
+import { View, Button } from 'react-native';
 
 const HomeForm = ({navigation}) => {
   
   return (
-      <View >
-        <Text>Home Screen</Text>
+      <View >       
         <Button title="Go to Subscription" 
         onPress={()=> navigation.navigate("Subscriptions")}/>
       </View>

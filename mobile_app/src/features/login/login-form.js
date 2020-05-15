@@ -16,15 +16,15 @@ import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Feather from 'react-native-vector-icons/Feather';
 import {AuthContext} from '../../components/context';
 
+import MainHeader from '../../components/headers/main-header';
+
 const LoginForm = ({navigation}) => {
 
     const { login } = React.useContext(AuthContext);
 
     return (
-        <View style={styles.container}>
-            <View style={styles.header}>
-            <Text style={styles.text_header}>Welcome</Text>
-            </View>
+        <View style={styles.container}>          
+            <MainHeader title="Welcome" />
 
         <View style={styles.footer}>
             {/* <Button

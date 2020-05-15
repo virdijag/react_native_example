@@ -15,7 +15,7 @@ import LinearGradient from 'react-native-linear-gradient';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Feather from 'react-native-vector-icons/Feather';
 import {AuthContext} from '../../components/context';
-
+import MainHeader from '../../components/headers/main-header';
 
 const RegisterForm = ({navigation}) => {
 
@@ -23,9 +23,7 @@ const RegisterForm = ({navigation}) => {
 
     return (
         <View style={styles.container}>
-            <View style={styles.header}>
-            <Text style={styles.text_header}>Registeration</Text>
-            </View>
+             <MainHeader title="Registration" />
 
         <View style={styles.footer}>
          
